@@ -51,3 +51,6 @@ coverage(function(coverageData) {
 });
 ````
 
+license
+=======
+new BSD.
