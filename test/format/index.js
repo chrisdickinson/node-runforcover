@@ -32,6 +32,13 @@ coverage(function(coverageData) {
         var html = runforcover.formatters.html.format(coverageData[filename]);
 
         var filePath = path.join('html', path.basename(filename) + ".html");
+
+        html = "<style>" + "\n";
+        + "  .covered { background: #C9F76F; }" + "\n";
+        + "  .uncovered { background: #FDD; }" + "\n";
+        + "  .partialuncovered { background: #FFA; }" + "\n";
+        + "</style>" + "\n"
+        + html;
         fs.writeFileSync(filePath, html);
 
         // return control back to the original require function

@@ -49,11 +49,6 @@ module.exports.format = function(coverageData) {
         fileOutput.push(lineOutput.join(""));
     }
   
-    finalOutput.push("<style>");
-    finalOutput.push("  .covered { background: #C9F76F; }")
-    finalOutput.push("  .uncovered { background: #FDD; }")
-    finalOutput.push("  .partialuncovered { background: #FFA; }");
-    finalOutput.push("</style>");
     finalOutput.push("<pre>");
     finalOutput.push(fileOutput.join("\n"));
     finalOutput.push("</pre>");
