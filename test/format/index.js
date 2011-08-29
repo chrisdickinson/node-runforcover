@@ -4,16 +4,6 @@ var runforcover = require("../../index");
 var fs = require('fs');
 var path = require('path');
 
-String.prototype.trim = function() {
-    return this.replace(/^\s+|\s+$/g,"");
-}
-String.prototype.ltrim = function() {
-    return this.replace(/^\s+/,"");
-}
-String.prototype.rtrim = function() {
-    return this.replace(/\s+$/,"");
-}
-
 var coverage = runforcover.cover();
 
 var test1 = require("./src/test1");
