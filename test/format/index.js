@@ -33,10 +33,10 @@ coverage(function(coverageData) {
 
         var filePath = path.join('html', path.basename(filename) + ".html");
 
-        html = "<style>" + "\n";
-        + "  .covered { background: #C9F76F; }" + "\n";
-        + "  .uncovered { background: #FDD; }" + "\n";
-        + "  .partialuncovered { background: #FFA; }" + "\n";
+        html = "<style>" + "\n"
+        + "  .covered { background: #C9F76F; }" + "\n"
+        + "  .uncovered { background: #FDD; }" + "\n"
+        + "  .partialuncovered { background: #FFA; }" + "\n"
         + "</style>" + "\n"
         + html;
         fs.writeFileSync(filePath, html);
