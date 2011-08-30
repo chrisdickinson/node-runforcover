@@ -238,10 +238,12 @@ module.exports.cover = function(fileRegex) {
       match = fileRegex instanceof RegExp ?
         fileRegex : new RegExp(
             fileRegex ? fileRegex.replace(/\//g, '\\/').replace(/\./g, '\\.') : '.*'
-        , 'g'),
+        , ''),
       target = this;
+    
 
   require.extensions['.js'] = function(module, filename) {
+
     if(!match.test(filename)) return originalRequire(module, filename);
 
     var context = target.createEnvironment(module, filename),
