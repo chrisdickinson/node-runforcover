@@ -12,6 +12,13 @@ var test2 = require("./src/test2");
 test1.run();
 test2.run();
 
+var type = 'html';
+try {
+    fs.statSync(type);
+} catch (e) {
+    fs.mkdirSync(type, 0755);
+}
+
 coverage(function(coverageData) {
     // coverageData is an object keyed by filename.
     for(var filename in coverageData) {
@@ -21,7 +28,7 @@ coverage(function(coverageData) {
 
         var html = runforcover.formatters.html.format(coverageData[filename]);
 
-        var filePath = path.join('html', path.basename(filename) + ".html");
+        var filePath = path.join(type, path.basename(filename) + "." + type);
 
         html = "<style>" + "\n"
         + "  .covered { background: #C9F76F; }" + "\n"
