@@ -12,7 +12,7 @@ var test2 = require("./src/test2");
 test1.run();
 test2.run();
 
-var types = ['html', 'cli', 'json'];
+var types = ['html', 'plain', 'json'];
 var outDir = 'test-out';
 try {
     fs.statSync(outDir);

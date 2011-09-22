@@ -4,7 +4,7 @@ var bunker = require('bunker'),
     fs = require('fs'),
     vm = require('vm'),
     html_formatter = require('./formatters/html'),
-    cli_formatter = require('./formatters/cli'),
+    plain_formatter = require('./formatters/plain'),
     json_formatter = require('./formatters/json');
 
 function CoverageData (filename, bunker) {
@@ -232,7 +232,7 @@ module.exports.createEnvironment = function(module, filename) {
 
 module.exports.formatters = {
   html: html_formatter,
-  cli: cli_formatter,
+  plain: plain_formatter,
   json: json_formatter
 };
 

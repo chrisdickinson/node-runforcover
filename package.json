@@ -8,8 +8,7 @@
         "test" : "test"
     },
     "dependencies" : {
-        "bunker" : "0.1.X",
-        "cli-table": "0.0.1"
+        "bunker" : "0.1.X"
     },
     "scripts" : {
         "test" : "node test/index.js"
