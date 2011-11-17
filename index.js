@@ -2,8 +2,10 @@ var bunker = require('bunker'),
     Module = require('module').Module,
     path = require('path'),
     fs = require('fs'),
-    vm = require('vm');
-    html_formatter = require('./formatters/html');
+    vm = require('vm'),
+    html_formatter = require('./formatters/html'),
+    plain_formatter = require('./formatters/plain'),
+    json_formatter = require('./formatters/json');
 
 function CoverageData (filename, bunker) {
   this.bunker = bunker;
@@ -229,7 +231,9 @@ module.exports.createEnvironment = function(module, filename) {
 };
 
 module.exports.formatters = {
-  html: html_formatter
+  html: html_formatter,
+  plain: plain_formatter,
+  json: json_formatter
 };
 
 module.exports.cover = function(fileRegex) {
