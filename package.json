@@ -1,6 +1,6 @@
 {
     "name" : "runforcover",
-    "version" : "0.0.1",
+    "version" : "0.0.2",
     "description" : "require plugin for js code coverage using bunker",
     "main" : "index.js",
     "directories" : {
