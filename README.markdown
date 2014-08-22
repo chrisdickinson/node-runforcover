@@ -53,4 +53,7 @@ coverage(function(coverageData) {
 
 license
 =======
-new BSD.
+
+Copyright (c) 2011 Chris Dickinson <christopher.s.dickinson@gmail.com>
+
+Licensed under the new BSD license; see LICENSE for details.
